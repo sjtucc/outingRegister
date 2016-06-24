@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+  
+  
+  <display-name>OutingRegister</display-name>
+  
+  
+
+
+         <servlet> 
+              <servlet-name>MyIdServlet</servlet-name> 
+              <servlet-class>cn.sap.action.MyIdServlet</servlet-class> 
+       </servlet> 
+
+       <servlet-mapping> 
+              <servlet-name>MyIdServlet</servlet-name> 
+              <url-pattern>/MyIdServlet</url-pattern> 
+       </servlet-mapping> 
+  
+  
+  		 <servlet> 
+              <servlet-name>SaveServlet</servlet-name> 
+              <servlet-class>cn.sap.action.SaveServlet</servlet-class> 
+       </servlet> 
+
+       <servlet-mapping> 
+              <servlet-name>SaveServlet</servlet-name> 
+              <url-pattern>/SaveServlet</url-pattern> 
+       </servlet-mapping> 
+  
+  
+  
+   <servlet> 
+              <servlet-name>MyNameServlet</servlet-name> 
+              <servlet-class>cn.sap.action.MyNameServlet</servlet-class> 
+       </servlet> 
+
+       <servlet-mapping> 
+              <servlet-name>MyNameServlet</servlet-name> 
+              <url-pattern>/MyNameServlet</url-pattern> 
+       </servlet-mapping> 
+  
+  
+    <servlet> 
+              <servlet-name>CellphoneServlet</servlet-name> 
+              <servlet-class>cn.sap.action.CellphoneServlet</servlet-class> 
+       </servlet> 
+
+       <servlet-mapping> 
+              <servlet-name>CellphoneServlet</servlet-name> 
+              <url-pattern>/CellphoneServlet</url-pattern> 
+       </servlet-mapping> 
+  
+  
+  <servlet> 
+              <servlet-name>MyCardServlet</servlet-name> 
+              <servlet-class>cn.sap.action.MyCardServlet</servlet-class> 
+       </servlet> 
+
+       <servlet-mapping> 
+              <servlet-name>MyCardServlet</servlet-name> 
+              <url-pattern>/MyCardServlet</url-pattern> 
+       </servlet-mapping> 
+       
+       
+         <servlet> 
+              <servlet-name>PartnerNameServlet</servlet-name> 
+              <servlet-class>cn.sap.action.PartnerNameServlet</servlet-class> 
+       </servlet> 
+
+       <servlet-mapping> 
+              <servlet-name>PartnerNameServlet</servlet-name> 
+              <url-pattern>/PartnerNameServlet</url-pattern> 
+       </servlet-mapping> 
+  
+  
+  
+  		<servlet> 
+              <servlet-name>PartnerCardServlet</servlet-name> 
+              <servlet-class>cn.sap.action.PartnerCardServlet</servlet-class> 
+       </servlet> 
+
+       <servlet-mapping> 
+              <servlet-name>PartnerCardServlet</servlet-name> 
+              <url-pattern>/PartnerCardServlet</url-pattern> 
+       </servlet-mapping>  
+       
+       
+       	<servlet> 
+              <servlet-name>KidNameServlet</servlet-name> 
+              <servlet-class>cn.sap.action.KidNameServlet</servlet-class> 
+       </servlet> 
+
+       <servlet-mapping> 
+              <servlet-name>KidNameServlet</servlet-name> 
+              <url-pattern>/KidNameServlet</url-pattern> 
+       </servlet-mapping> 
+       
+       
+       
+       <servlet> 
+              <servlet-name>KidCardServlet</servlet-name> 
+              <servlet-class>cn.sap.action.KidCardServlet</servlet-class> 
+       </servlet> 
+
+       <servlet-mapping> 
+              <servlet-name>KidCardServlet</servlet-name> 
+              <url-pattern>/KidCardServlet</url-pattern> 
+       </servlet-mapping> 
+       
+       	<servlet> 
+              <servlet-name>RoomMateNameServlet</servlet-name> 
+              <servlet-class>cn.sap.action.RoomMateNameServlet</servlet-class> 
+       </servlet> 
+
+       <servlet-mapping> 
+              <servlet-name>RoomMateNameServlet</servlet-name> 
+              <url-pattern>/RoomMateNameServlet</url-pattern> 
+       </servlet-mapping> 
+       
+       
+<servlet>
+	<servlet-name>springmvc</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	<init-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>classpath:springmvc.xml</param-value>
+	</init-param>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+<!--   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SaveServlet</servlet-name>
+    <servlet-class>cn.sap.action.SaveServlet</servlet-class>
+  </servlet> -->
+
+
+
+<servlet-mapping>
+	<servlet-name>springmvc</servlet-name>
+	<url-pattern>*.action</url-pattern>
+</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SaveServlet</servlet-name>
+    <url-pattern>/servlet/SaveServlet</url-pattern>
+  </servlet-mapping>
+
+       
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
